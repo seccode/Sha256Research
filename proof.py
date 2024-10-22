@@ -7,7 +7,7 @@ from sklearn.model_selection import train_test_split
 def _hash(s):
     h=hashlib.sha256()
     h.update(s.encode("utf-8","replace"))
-    return h.hexdigest()[1] in "01234567"
+    return h.hexdigest()[0] in "01234567"
 
 if __name__=="__main__":
     m=0
