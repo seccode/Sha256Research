@@ -23,7 +23,7 @@ if __name__=="__main__":
     print(y.count(1)/len(y))
     m=0
     for i in range(100_000):
-        x_train,x_test,y_train,y_test=train_test_split(x,y,stratify=y,test_size=0.2)
+        x_train,x_test,y_train,y_test=train_test_split(x,y,stratify=y,test_size=0.95)
         clf=RandomForestClassifier(n_estimators=1,max_depth=1)
         clf.fit(x_train,y_train)
         m+=clf.score(x_test,y_test)
